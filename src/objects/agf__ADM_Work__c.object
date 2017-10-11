@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <fields>
+        <fullName>Source_Environment__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The source environment where the data will be pulled from for change sets.</inlineHelpText>
+        <label>Source Environment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SkywayUAT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SkywayQA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SkywayDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AIDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AstroDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ChattyDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CloudyDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CodeyDev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>COMDEV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HootDev</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Environment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Environment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Skyway Dev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Personal Dev</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Triaged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blocked</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dev Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blocked - QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ready for UAT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT in Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UAT Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - New Bug Logged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Resolved Without Code Change</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Never</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Acknowledged</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved for Release</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Defunct</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Duplicate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Eng Internal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Known Bug Exists</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - LAP Request Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - LAP Request Denied</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - No Fix - Feature Request</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - No Fix - Will Not Fix</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - No Fix - Working as Designed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed - Resolved With Internal Tools</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deferred</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Eng Internal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fixed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Integrate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Investigating</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>More Info Reqd from Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not a bug</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Reproducible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Release</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+</CustomObject>

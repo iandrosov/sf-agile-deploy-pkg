@@ -1,0 +1,65 @@
+<apex:page standardController="agf__ADM_Work__c" recordSetVar="storys" extensions="EXT_ADM_StoryListCtrl" tabstyle="account" sidebar="false">
+  <apex:form >
+  <apex:pageBlock >
+    
+      <apex:panelGrid columns="2">
+        <apex:outputLabel value="View:"/>
+        <apex:selectList value="{!filterId}" size="1">
+          <apex:actionSupport event="onchange" rerender="list"/>
+          <apex:selectOptions value="{!listviewoptions}"/>
+        </apex:selectList>
+      </apex:panelGrid>
+      
+      <apex:pageBlockTable value="{!storys}" var="a" id="list">
+        <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.agf__Assignee__c}"/>
+        <apex:column value="{!a.agf__Assignee__r.UserName}"/>
+        <apex:column value="{!a.agf__Status__c}"/>
+        <apex:column value="{!a.Source_Environment__c}"/>
+        <apex:column value="{!a.agf__Environment__c}"/>  
+          
+        <apex:column title="Deploy">
+            <apex:facet name="header" >Deploy QA
+			</apex:facet>
+            <!-- SAMPLE https://sleepy-lowlands-58202.herokuapp.com -->
+            <!-- SAMPLE https://sf-agile-deploy.herokuapp.com -->
+            <apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!baseURL}&api={!$Api.Enterprise_Server_URL_390}">
+                Deploy
+            </apex:outputLink>
+        </apex:column>  
+          
+        <apex:column title="Deploy">
+            <apex:facet name="header" >Update QA
+			</apex:facet>
+			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+                Update
+            </apex:outputLink>    
+		</apex:column>  
+
+        <apex:column title="Deploy">
+            <apex:facet name="header" >Deploy UAT
+			</apex:facet>
+			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+                Deploy
+            </apex:outputLink>
+		</apex:column> 
+          
+        <apex:column title="Deploy">
+            <apex:facet name="header" >Update UAT
+			</apex:facet>
+			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+                Update
+            </apex:outputLink>    
+		</apex:column>  
+          
+      </apex:pageBlockTable>
+      
+      <apex:pageBlock > 
+                 <apex:pageBlockButtons location="bottom">
+                     <apex:commandLink action="{!Previous}" value="Previous Page" rendered="{!HasPrevious}"/>
+                     <apex:commandLink action="{!Next}" value="Next Page" rendered="{!HasNext}"/>
+                 </apex:pageBlockButtons>
+      </apex:pageBlock>    
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

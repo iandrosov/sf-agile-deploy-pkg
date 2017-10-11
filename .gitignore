@@ -1,0 +1,4 @@
+.DS_Store
+build.properties
+build.xml
+deploy.properties

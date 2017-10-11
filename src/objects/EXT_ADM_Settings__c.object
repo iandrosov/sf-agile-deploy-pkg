@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>SF Agile Deployment tool settings config environment</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Service_URL__c</fullName>
+        <description>Heroku service URL for deployment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Heroku service URL for deployment</inlineHelpText>
+        <label>Service URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>EXT ADM Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

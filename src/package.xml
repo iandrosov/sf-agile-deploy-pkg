@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>EXT_ADM_StoryListCtrl</members>
+        <members>EXT_ADM_StoryListCtrlTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>EXT_ADM_StoryList</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>EXT_ADM_Settings__c.Service_URL__c</members>
+        <members>agf__ADM_Work__c.Source_Environment__c</members>
+        <members>agf__ADM_Work__c.agf__Environment__c</members>
+        <members>agf__ADM_Work__c.agf__Status__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>EXT_ADM_Settings__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Deployment</members>
+        <name>CustomTab</name>
+    </types>
+    <version>38.0</version>
+</Package>
