@@ -23,7 +23,7 @@
 			</apex:facet>
             <!-- SAMPLE https://sleepy-lowlands-58202.herokuapp.com -->
             <!-- SAMPLE https://sf-agile-deploy.herokuapp.com -->
-            <apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!baseURL}&api={!$Api.Enterprise_Server_URL_390}">
+            <apex:outputLink styleClass="btn" style="text-decoration:none;padding:4px;" target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
                 Deploy
             </apex:outputLink>
         </apex:column>  
@@ -31,7 +31,7 @@
         <apex:column title="Deploy">
             <apex:facet name="header" >Update QA
 			</apex:facet>
-			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+			<apex:outputLink styleClass="btn" style="text-decoration:none;padding:4px;" target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYQA&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
                 Update
             </apex:outputLink>    
 		</apex:column>  
@@ -39,7 +39,7 @@
         <apex:column title="Deploy">
             <apex:facet name="header" >Deploy UAT
 			</apex:facet>
-			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+			<apex:outputLink styleClass="btn" style="text-decoration:none;padding:4px;" target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/git?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
                 Deploy
             </apex:outputLink>
 		</apex:column> 
@@ -47,7 +47,7 @@
         <apex:column title="Deploy">
             <apex:facet name="header" >Update UAT
 			</apex:facet>
-			<apex:outputLink target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
+			<apex:outputLink styleClass="btn" style="text-decoration:none;padding:4px;" target="_new" value="{!$Setup.EXT_ADM_Settings__c.Service_URL__c}/update?id={!a.Id}&story={!a.name}&assigned={!a.agf__Assignee__c}&sbn={!a.Source_Environment__c}&target=SKYWAYUAT&session={!$Api.Session_ID}&api={!$Api.Enterprise_Server_URL_390}">
                 Update
             </apex:outputLink>    
 		</apex:column>  
